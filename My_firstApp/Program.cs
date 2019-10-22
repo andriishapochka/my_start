@@ -6,9 +6,17 @@ namespace My_firstApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Привiт Свiт!");
+            Calculator.Add(2, 3);
             Console.ReadKey();
             
+        }
+    }
+    class Calculator
+    {
+        public static void Add(int x, int y)
+        {
+            int z = x + y;
+            Console.WriteLine($"Сума {x} та {y} дорiвнює {z}");
         }
     }
 }
