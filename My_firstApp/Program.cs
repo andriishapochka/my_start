@@ -7,6 +7,7 @@ namespace My_firstApp
         static void Main(string[] args)
         {
             Console.WriteLine("Привiт Свiт!");
+            Console.WriteLine("Slava Ukraiini!");
         }
     }
 }
