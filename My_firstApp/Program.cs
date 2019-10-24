@@ -7,7 +7,7 @@ namespace My_firstApp
         static void Main(string[] args)
         {
             int x = 10;
-            int z = x + 5; // 15
+            int z = x - 8; // 2
             Console.WriteLine(z);
 
             Console.ReadKey();
