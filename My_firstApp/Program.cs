@@ -7,8 +7,11 @@ namespace My_firstApp
         static void Main(string[] args)
         {
             int x = 10;
-            int z = x - 8; // 2
+            int z = x / 4; // 2
+            int y = x * 5; // 50
+
             Console.WriteLine(z);
+            Console.WriteLine(y);
 
             Console.ReadKey();
             
