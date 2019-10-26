@@ -3,26 +3,40 @@
 namespace My_firstApp
 {
     class Program
+    { 
+        static void Main(string[] args)
     {
-        static void Main(string[] args) // логические операции
-        {
-            // & | ^ ~
-
-           int x1 = 2; // 010
-           int y1 = 5; // 101
-                       // 000 - 0
-
-            Console.WriteLine(x1 & y1); // логическое умножение
-
-            int x2 = 4; // 100
-            int y2 = 5; // 101
-                        // 100 - 4
-
-            Console.WriteLine(x2 & y2);
+            byte a = 4;
+            int b = a + 70; // расширяющее преобразвание
+            // byte->short->int->long->decimal //компилятор преобразование производит сам
+            //byte->short->int->double  //компилятор преобразование производит сам
+            //byte->short->float->double //компилятор преобразование производит сам
+            //char->int   //компилятор преобразование производит сам
+            Console.WriteLine(b);
             Console.ReadKey();
 
+    }
+                //static void Main(string[] args) // логические операции
+       
+            // & | ^ ~
+            // XOR
 
-        }
+
+           //int x1 = 2; // 010
+           //int y1 = 5; // 101
+           //            // 000 - 0
+
+           // Console.WriteLine(x1 & y1); // логическое умножение
+
+           // int x2 = 4; // 100
+           // int y2 = 5; // 101
+           //             // 100 - 4
+
+           // Console.WriteLine(x2 & y2);
+           // Console.ReadKey();
+
+
+     
         //static void Main(string[] args) // инкрименто, декрименто, отстаток от деления целочисленного
         //{
 
