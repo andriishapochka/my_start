@@ -3,20 +3,32 @@
 namespace My_firstApp
 {
     class Program
-    { 
-        static void Main(string[] args) // факториал шахматнй доски
-
-
+    {
+        static void Main(string[] args)
         {
-        int n = 64;
-        double result = 1;
-        for (int i = 1; i<=n; i++)
-          {
-                result = result * i;
-          }
-            Console.WriteLine(result);
+            int[] numbers = { 1, 2, 3, 4 }; // 0-3
+            int n = numbers[0]; // 1
+            numbers[0] = 7;
+            Console.WriteLine(numbers[0]);
+            Console.WriteLine(numbers[1]);
+            Console.WriteLine(numbers[2]);
+            Console.WriteLine(numbers[3]);
             Console.ReadKey();
+
         }
+        //static void Main(string[] args) // факториал шахматнй доски
+
+
+        //{
+        //int n = 64;
+        //double result = 1;
+        //for (int i = 1; i<=n; i++)
+        //  {
+        //        result = result * i;
+        //  }
+        //    Console.WriteLine(result);
+        //    Console.ReadKey();
+        //}
            
         //static void main(string[] args)
     //{
