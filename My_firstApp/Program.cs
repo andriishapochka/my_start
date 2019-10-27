@@ -4,18 +4,32 @@ namespace My_firstApp
 {
     class Program
     { 
-        static void Main(string[] args)
-    {
-            byte a = 4;
-            int b = a + 70; // расширяющее преобразвание
-            // byte->short->int->long->decimal //компилятор преобразование производит сам
-            //byte->short->int->double  //компилятор преобразование производит сам
-            //byte->short->float->double //компилятор преобразование производит сам
-            //char->int   //компилятор преобразование производит сам
-            Console.WriteLine(b);
-            Console.ReadKey();
+        static void Main(string[] args) // факториал шахматнй доски
 
-    }
+
+        {
+        int n = 64;
+        double result = 1;
+        for (int i = 1; i<=n; i++)
+          {
+                result = result * i;
+          }
+            Console.WriteLine(result);
+            Console.ReadKey();
+        }
+           
+        //static void main(string[] args)
+    //{
+    //        byte a = 4;
+    //        int b = a + 70; // расширяющее преобразвание
+    //        // byte->short->int->long->decimal //компилятор преобразование производит сам
+    //        //byte->short->int->double  //компилятор преобразование производит сам
+    //        //byte->short->float->double //компилятор преобразование производит сам
+    //        //char->int   //компилятор преобразование производит сам
+    //        Console.WriteLine(b);
+    //        Console.ReadKey();
+
+    
                 //static void Main(string[] args) // логические операции
        
             // & | ^ ~
