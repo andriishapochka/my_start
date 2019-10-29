@@ -3,19 +3,27 @@
 namespace My_firstApp
 {
     class Program
-    {
-        static void Main(string[] args)
+    {    static void Main(string[] args)
         {
-            int[] numbers = { 1, 2, 3, 4 }; // 0-3
+            int[] numbers = new int[4] { 1, 2, 3, 4 }; // 0-3
             int n = numbers[0]; // 1
             numbers[0] = 7;
-            Console.WriteLine(numbers[0]);
-            Console.WriteLine(numbers[1]);
-            Console.WriteLine(numbers[2]);
             Console.WriteLine(numbers[3]);
-            Console.ReadKey();
 
+            Console.ReadKey();
         }
+        //static void Main(string[] args)
+        //{
+        //    int[] numbers = { 1, 2, 3, 4 }; // 0-3
+        //    int n = numbers[0]; // 1
+        //    numbers[0] = 7;
+        //    Console.WriteLine(numbers[0]);
+        //    Console.WriteLine(numbers[1]);
+        //    Console.WriteLine(numbers[2]);
+        //    Console.WriteLine(numbers[3]);
+        //    Console.ReadKey();
+
+        //}
         //static void Main(string[] args) // факториал шахматнй доски
 
 
