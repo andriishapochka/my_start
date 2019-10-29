@@ -3,15 +3,43 @@
 namespace My_firstApp
 {
     class Program
-    {    static void Main(string[] args)
-        {
-            int[] numbers = new int[4] { 1, 2, 3, 4 }; // 0-3
-            int n = numbers[0]; // 1
-            numbers[0] = 7;
-            Console.WriteLine(numbers[3]);
+    {    static void Main(string[] args) //виды инициализации массивов
 
+        {
+            int[] numbers = { 1, 3, 5, 7 };
+
+            for (int i = 0; i < 4; i++)// выведение значения массива с помощью for
+            {
+                Console.WriteLine(numbers[i]);
+
+            }
             Console.ReadKey();
         }
+
+            //int[] numbers0 = { 1, 3, 5, 7 };// выведение значения массива с помощью foreach 
+            //foreach(int i in numbers0)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            
+            //Console.ReadKey();
+
+        //    int[] numbers = new int[4] { 1, 2, 3, 4 }; // инициализация с ключ. new и указанием размера массива
+        //    int n = numbers[0]; // 1
+        //    numbers[0] = 7;
+        //    Console.WriteLine(numbers[3]);
+            
+
+        //    int[] numbers2 = { 2, 4, 6, 8 }; // без использования ключевого слова new
+        //    int t = numbers[0] = 5;
+        //    Console.WriteLine(numbers2[3]);
+
+        //    int[] numbers3 = new[] { 1, 3, 5, 7 };// иниц. с ключ словом new и без указания размера массива
+
+        //    Console.WriteLine(numbers3[2]);
+        //    Console.ReadKey();
+        //}
+
         //static void Main(string[] args)
         //{
         //    int[] numbers = { 1, 2, 3, 4 }; // 0-3
