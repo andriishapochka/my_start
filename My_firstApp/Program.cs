@@ -3,18 +3,59 @@
 namespace My_firstApp
 {
     class Program
-    {    static void Main(string[] args) //виды инициализации массивов
-
+    {
+        static void Main(string[] args)// ввод параметров метода по ссылке и по знаению
         {
-            int[] numbers = { 1, 3, 5, 7 };
 
-            for (int i = 0; i < 4; i++)// выведение значения массива с помощью for
+            int z = 5;
+            int d = 6;
+            // ввод параметров по значению ( используется копия значения и после выполнения метода не изменяется параметр вариант 2)
+            Console.WriteLine($"Initial value z= {z}");
+            AdditionVal(z,d);
+            Console.WriteLine($"After AdditionVal z= {z}");
+            AdditionVal(z, d);
+            Console.WriteLine($"2After AdditionVal z= {z}");
+            // ввод параметрв по ссылке (используется само значение которое изменяется после выполнения метода вариант 2)
+            AdditionRef(ref z, d);
+            Console.WriteLine($"After AdditionRef z= {z}");
+            AdditionRef(ref z,d);
+            Console.WriteLine($"2After AdditionRef z= {z}");
+
+            Console.ReadKey();
+
+            static void AdditionRef(ref int x, int y)
             {
-                Console.WriteLine(numbers[i]);
+                x = x + y;
+                Console.WriteLine($"AdditionRef x={x}");
 
             }
-            Console.ReadKey();
+
+            static void AdditionVal(int x, int y)
+            {
+                x= x + y;
+                Console.WriteLine($"AdditionVal x={x}");
+            }
+
+            static int Sum(int x, int y)
+
+            {
+                
+                return x + y;
+
+            }
         }
+    }
+}
+        //{
+        //    int[] numbers = { 1, 3, 5, 7 };
+
+        //    for (int i = 0; i < 4; i++)// выведение значения массива с помощью for
+        //    {
+        //        Console.WriteLine(numbers[i]);
+
+        //    }
+        //    Console.ReadKey();
+        //}
 
             //int[] numbers0 = { 1, 3, 5, 7 };// выведение значения массива с помощью foreach 
             //foreach(int i in numbers0)
@@ -125,5 +166,5 @@ namespace My_firstApp
         //    //Console.ReadKey();
             
         //}
-    }
-}
+    
+
