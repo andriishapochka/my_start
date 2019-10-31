@@ -4,46 +4,60 @@ namespace My_firstApp
 {
     class Program
     {
-        static void Main(string[] args)// ввод параметров метода по ссылке и по знаению
+        static void Main(string[] args)// определение выходного параметра с помощью ключевого слова out
         {
-
-            int z = 5;
-            int d = 6;
-            // ввод параметров по значению ( используется копия значения и после выполнения метода не изменяется параметр вариант 2)
-            Console.WriteLine($"Initial value z= {z}");
-            AdditionVal(z,d);
-            Console.WriteLine($"After AdditionVal z= {z}");
-            AdditionVal(z, d);
-            Console.WriteLine($"2After AdditionVal z= {z}");
-            // ввод параметрв по ссылке (используется само значение которое изменяется после выполнения метода вариант 2)
-            AdditionRef(ref z, d);
-            Console.WriteLine($"After AdditionRef z= {z}");
-            AdditionRef(ref z,d);
-            Console.WriteLine($"2After AdditionRef z= {z}");
-
+            int perimeter;
+            int area;
+            GetData(10, 15, out area, out perimeter);
+            Console.WriteLine($"Area = {area}");
+            Console.WriteLine($"Perimeter = {perimeter}");
             Console.ReadKey();
 
-            static void AdditionRef(ref int x, int y)
-            {
-                x = x + y;
-                Console.WriteLine($"AdditionRef x={x}");
 
+
+            static void GetData(int width, int height, out int area, out int perimeter)
+            {
+                perimeter = (width + height) * 2;
+
+                area = width * height;
             }
 
-            static void AdditionVal(int x, int y)
-            {
-                x= x + y;
-                Console.WriteLine($"AdditionVal x={x}");
-            }
+            //int z = 5;
+            //int d = 6;
+            //// ввод параметров по значению ( используется копия значения и после выполнения метода не изменяется параметр вариант 2)
+            //Console.WriteLine($"Initial value z= {z}");
+            //AdditionVal(z, d);
+            //Console.WriteLine($"After AdditionVal z= {z}");
+            //AdditionVal(z, d);
+            //Console.WriteLine($"2After AdditionVal z= {z}");
+            //// ввод параметрв по ссылке (используется само значение которое изменяется после выполнения метода вариант 2)
+            //AdditionRef(ref z, d);
+            //Console.WriteLine($"After AdditionRef z= {z}");
+            //AdditionRef(ref z, d);
+            //Console.WriteLine($"2After AdditionRef z= {z}");
 
-            static int Sum(int x, int y)
-
-            {
-                
-                return x + y;
-
-            }
+            //Console.ReadKey();
         }
+        
+            //static void AdditionRef(ref int x, int y)
+            //{
+            //    x = x + y;
+            //    Console.WriteLine($"AdditionRef x={x}");
+
+            //}
+
+            //static void AdditionVal(int x, int y)
+            //{
+            //    x= x + y;
+            //    Console.WriteLine($"AdditionVal x={x}");
+            //}
+
+            //static int Sum(int x, int y)
+
+            //{
+            //   return x + y;
+            //}
+        
     }
 }
         //{
