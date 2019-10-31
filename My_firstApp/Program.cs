@@ -4,12 +4,13 @@ namespace My_firstApp
 {
     class Program
     {
-        static void Main(string[] args)// необязательные параметры 
+        static void Main(string[] args)// именованные параметры 
         {
-            //необязательные параметры (будет использоваться значение по умолчанию, если значение ему не передано)
-            int d1 = Optional(1, 2, 3, 4);
-            int d2 = Optional(1, 2, 3);
-            int d3 = Optional(1, 2);
+            //именованные параметры (может быть изменён порядок передачи значения))
+            int d1 = Optional(x:1,z:3, s:4, y:2); //именованные параметры
+            int d2 = Optional(1,2,3);
+
+
             Console.ReadKey();
 
             static int Optional(int x, int y, int z=5, int s=7)
