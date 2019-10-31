@@ -4,23 +4,34 @@ namespace My_firstApp
 {
     class Program
     {
-        static void Main(string[] args)// определение выходного параметра с помощью ключевого слова out
+        static void Main(string[] args)// необязательные параметры 
         {
-            int perimeter;
-            int area;
-            GetData(10, 15, out area, out perimeter);
-            Console.WriteLine($"Area = {area}");
-            Console.WriteLine($"Perimeter = {perimeter}");
+            //необязательные параметры (будет использоваться значение по умолчанию, если значение ему не передано)
+            int d1 = Optional(1, 2, 3, 4);
+            int d2 = Optional(1, 2, 3);
+            int d3 = Optional(1, 2);
             Console.ReadKey();
 
-
-
-            static void GetData(int width, int height, out int area, out int perimeter)
+            static int Optional(int x, int y, int z=5, int s=7)
             {
-                perimeter = (width + height) * 2;
-
-                area = width * height;
+                return x + y + z + s;
             }
+
+            //int perimeter;
+            //int area;
+            //GetData(10, 15, out area, out perimeter);
+            //Console.WriteLine($"Area = {area}");
+            //Console.WriteLine($"Perimeter = {perimeter}");
+            //Console.ReadKey();
+
+
+
+            //static void GetData(int width, int height, out int area, out int perimeter)
+            //{
+            //    perimeter = (width + height) * 2;
+
+            //    area = width * height;
+            //}
 
             //int z = 5;
             //int d = 6;
