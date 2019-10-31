@@ -4,20 +4,43 @@ namespace My_firstApp
 {
     class Program
     {
-        static void Main(string[] args)// именованные параметры 
+
+        static int Fibonachi(int n) // рекурсивные функции (ряд фибоначи)
         {
-            //именованные параметры (может быть изменён порядок передачи значения))
-            int d1 = Optional(x:1,z:3, s:4, y:2); //именованные параметры
-            int d2 = Optional(1,2,3);
+            if (n == 0)
+                return 0;
+            if (n == 1)
+                return 1;
+            else
+                return Fibonachi(n - 1) + Fibonachi(n - 2);
+        }
+        static void Main(string[] args)
+        {
+            int x = Fibonachi(8);
 
-
+            Console.WriteLine(x);
+            Console.WriteLine(Fibonachi(4));
+            Console.WriteLine(Fibonachi(6));
             Console.ReadKey();
 
-            static int Optional(int x, int y, int z=5, int s=7)
-            {
-                return x + y + z + s;
-            }
+        }
 
+    }
+}
+    //{
+    //    //именованные параметры (может быть изменён порядок передачи значения))
+    //    int d1 = Optional(x:1,z:3, s:4, y:2); //именованные параметры
+    //    int d2 = Optional(1,2,3);
+    //}
+
+
+//    Console.ReadKey();
+
+//            static int Optional(int x, int y, int z = 5, int s = 7)
+//    {
+//        return x + y + z + s;
+//    }
+//}
             //int perimeter;
             //int area;
             //GetData(10, 15, out area, out perimeter);
@@ -42,14 +65,14 @@ namespace My_firstApp
             //Console.WriteLine($"After AdditionVal z= {z}");
             //AdditionVal(z, d);
             //Console.WriteLine($"2After AdditionVal z= {z}");
-            //// ввод параметрв по ссылке (используется само значение которое изменяется после выполнения метода вариант 2)
-            //AdditionRef(ref z, d);
-            //Console.WriteLine($"After AdditionRef z= {z}");
-            //AdditionRef(ref z, d);
-            //Console.WriteLine($"2After AdditionRef z= {z}");
+        ////    //// ввод параметрв по ссылке (используется само значение которое изменяется после выполнения метода вариант 2)
+        ////    //AdditionRef(ref z, d);
+        ////    //Console.WriteLine($"After AdditionRef z= {z}");
+        ////    //AdditionRef(ref z, d);
+        ////    //Console.WriteLine($"2After AdditionRef z= {z}");
 
-            //Console.ReadKey();
-        }
+        ////    //Console.ReadKey();
+        ////}
         
             //static void AdditionRef(ref int x, int y)
             //{
@@ -70,8 +93,8 @@ namespace My_firstApp
             //   return x + y;
             //}
         
-    }
-}
+    
+
         //{
         //    int[] numbers = { 1, 3, 5, 7 };
 
