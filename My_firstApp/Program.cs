@@ -4,37 +4,48 @@ namespace My_firstApp
 {
     class Program
     {
+        static int x = 10;
 
-        static int Fibonachi(int n) // рекурсивные функции (ряд фибоначи)
-        {
-            if (n == 0)
-                return 0;
-            if (n == 1)
-                return 1;
-            else
-                return Fibonachi(n - 1) + Fibonachi(n - 2);
-        }
         static void Main(string[] args)
         {
-            int x = Fibonachi(8);
-
+            int x = 25;
             Console.WriteLine(x);
-            Console.WriteLine(Fibonachi(4));
-            Console.WriteLine(Fibonachi(6));
             Console.ReadKey();
 
         }
-
     }
 }
-    //{
-    //    //именованные параметры (может быть изменён порядок передачи значения))
-    //    int d1 = Optional(x:1,z:3, s:4, y:2); //именованные параметры
-    //    int d2 = Optional(1,2,3);
-    //}
+
+//        static int Fibonachi(int n) // рекурсивные функции (ряд фибоначи)
+//        {
+//            if (n == 0)
+//                return 0;
+//            if (n == 1)
+//                return 1;
+//            else
+//                return Fibonachi(n - 1) + Fibonachi(n - 2);
+//        }
+//        static void Main(string[] args)
+//        {
+//            int x = Fibonachi(8);
+
+//            Console.WriteLine(x);
+//            Console.WriteLine(Fibonachi(4));
+//            Console.WriteLine(Fibonachi(6));
+//            Console.ReadKey();
+
+//        }
+
+//    }
+//}
+//    //{
+//    //    //именованные параметры (может быть изменён порядок передачи значения))
+//    //    int d1 = Optional(x:1,z:3, s:4, y:2); //именованные параметры
+//    //    int d2 = Optional(1,2,3);
+//    //}
 
 
-//    Console.ReadKey();
+////    Console.ReadKey();
 
 //            static int Optional(int x, int y, int z = 5, int s = 7)
 //    {
