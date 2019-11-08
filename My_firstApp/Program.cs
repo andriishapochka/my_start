@@ -4,21 +4,45 @@ namespace My_firstApp
 {
     class Program
     {
-        //назначеная переменная внутри блока вызывается только внутри блока
-        //переменная на уровне метода скрывает переменную на уровне класса
-        //не можем в рамкам даннго класса определить переменную с таким же именем
-
-        static int x = 10;
-
         static void Main(string[] args)
         {
-            int x = 25;
-            Console.WriteLine(x);
+            Addition(new int[] { 1, 2, 3, 4 }); //МОЖНО РАЗНЫМ СПОСОБОМ ВНОСИТЬ ПАРАМЕТРЫ
+            Addition(2, 3, 4, 5);
+            Addition();
+        }
+        static void Addition(params int[] numbers)
+        {
+            int result = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                result += numbers[i];
+                
+            }
+            Console.WriteLine(result);
             Console.ReadKey();
-
         }
     }
 }
+
+
+
+
+//    {
+//        //назначеная переменная внутри блока вызывается только внутри блока
+//        //переменная на уровне метода скрывает переменную на уровне класса
+//        //не можем в рамкам даннго класса определить переменную с таким же именем
+
+//        static int x = 10;
+
+//        static void Main(string[] args)
+//        {
+//            int x = 25;
+//            Console.WriteLine(x);
+//            Console.ReadKey();
+
+//        }
+//    }
+//}
 
 //        static int Fibonachi(int n) // рекурсивные функции (ряд фибоначи)
 //        {
