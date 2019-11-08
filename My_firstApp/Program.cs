@@ -3,29 +3,46 @@
 namespace My_firstApp
 {
     class Program
-    {
+    {//перечесление может быть в пределах класса програм или вне класа в пределах пространства имён 
+        enum Days// перечисление- логически связанные константы(можно указать тип перечисления- по умолчанию int и присваивается от 0 и віше на единицу)
+        {
+            Monday=1,//по умолчанию присвоится один, или присваиваем сами
+            Tuesday=11,
+            Wednesday=22,
+            Thursday=33,
+            Friday,// 34
+            Saturday,
+            Sunday//кроме после последнего не ставится запятая
+        }
         static void Main(string[] args)
         {
-            Addition(new int[] { 1, 2, 3, 4 }); //МОЖНО РАЗНЫМ СПОСОБОМ ВНОСИТЬ ПАРАМЕТРЫ
-            Addition(2, 3, 4, 5);
-            Addition();
-        }
-        static void Addition(params int[] numbers)
-        {
-            int result = 0;
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                result += numbers[i];
-                
-            }
-            Console.WriteLine(result);
+            Days day;
+            day = Days.Friday;
+            Console.WriteLine(day);
             Console.ReadKey();
+
         }
     }
 }
-
-
-
+//        static void Main(string[] args)
+//        {
+//            Addition(new int[] { 1, 2, 3, 4 }); //МОЖНО РАЗНЫМ СПОСОБОМ ВНОСИТЬ ПАРАМЕТРЫ
+//            Addition(2, 3, 4, 5);
+//            Addition();
+//        }
+//        static void Addition(params int[] numbers)
+//        {
+//            int result = 0;
+//            for (int i = 0; i < numbers.Length; i++)
+//            {
+//                result += numbers[i];
+                
+//            }
+//            Console.WriteLine(result);
+//            Console.ReadKey();
+//        }
+//    }
+//}
 
 //    {
 //        //назначеная переменная внутри блока вызывается только внутри блока
