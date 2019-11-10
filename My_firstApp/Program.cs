@@ -2,13 +2,12 @@
 
 namespace My_firstApp
 {
-    struct User//структура пределяется вне класса- определяем переменные
-
+    struct User // так же ка переменніе можн определить массив структур
     {
-       public string name;
-       public int age;
+        public string name;
+        public int age;
 
-        public void DisplayInfo() 
+        public void DisplayInfo()
         {
             Console.WriteLine($"name={name} age={age}");
         }
@@ -18,20 +17,60 @@ namespace My_firstApp
     {
         static void Main(string[] args)
         {
+            User[] users = new User[2];//определяем массив структур с 2мя структурами
+            users[0].name = "Bob";
+            users[0].age = 20;
+            users[1].name = "Sam";
+            users[1].age = 25;
+            foreach (User user in users)
+            {
+                user.DisplayInfo();
+            }
+
             User tom;
             tom.name = "Tom";
             tom.age = 23;
-            int d = tom.age;
 
             tom.DisplayInfo();
-        Console.ReadKey();
+            Console.ReadKey();
 
         }
         string name = "Tom";
         int age = 23;
-        
     }
 }
+
+
+//struct User//структура пределяется вне класса- определяем переменные
+
+//    {
+//       public string name;
+//       public int age;
+
+//        public void DisplayInfo() 
+//        {
+//            Console.WriteLine($"name={name} age={age}");
+//        }
+
+//    }
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            User tom;
+//            tom.name = "Tom";
+//            tom.age = 23;
+//            int d = tom.age;
+
+//            tom.DisplayInfo();
+//        Console.ReadKey();
+
+//        }
+//        string name = "Tom";
+//        int age = 23;
+        
+//    }
+//}
 //    class Program
 //    {//перечесление может быть в пределах класса програм или вне класа в пределах пространства имён 
         
