@@ -2,46 +2,76 @@
 
 namespace My_firstApp
 {
+    struct User//структура пределяется вне класса- определяем переменные
+
+    {
+       public string name;
+       public int age;
+
+        public void DisplayInfo() 
+        {
+            Console.WriteLine($"name={name} age={age}");
+        }
+
+    }
     class Program
-    {//перечесление может быть в пределах класса програм или вне класа в пределах пространства имён 
-        
+    {
         static void Main(string[] args)
         {
-            ApplyOperation(10, 15, Operation.Add);//25
-            ApplyOperation(10, 15, Operation.Multiply);//150
-            Console.ReadKey();
+            User tom;
+            tom.name = "Tom";
+            tom.age = 23;
+            int d = tom.age;
+
+            tom.DisplayInfo();
+        Console.ReadKey();
 
         }
-        enum Operation
-        {
-            Add,
-            Subtract,
-            Multiply,
-            Divide
-        }
-        static void ApplyOperation(double x, double y, Operation op)
-        {
-            double result = 0.0;
-            switch (op)
-            {
-                case Operation.Add:
-                    result = x + y;
-                    break;
-                case Operation.Subtract:
-                    result = x - y;
-                    break;
-                case Operation.Multiply:
-                    result = x * y;
-                    break;
-                case Operation.Divide:
-                    result = x / y;
-                    break;
-            }
-            Console.WriteLine(result);
-
-        }
+        string name = "Tom";
+        int age = 23;
+        
     }
 }
+//    class Program
+//    {//перечесление может быть в пределах класса програм или вне класа в пределах пространства имён 
+        
+//        static void Main(string[] args)
+//        {
+//            ApplyOperation(10, 15, Operation.Add);//25
+//            ApplyOperation(10, 15, Operation.Multiply);//150
+//            Console.ReadKey();
+
+//        }
+//        enum Operation
+//        {
+//            Add,
+//            Subtract,
+//            Multiply,
+//            Divide
+//        }
+//        static void ApplyOperation(double x, double y, Operation op)
+//        {
+//            double result = 0.0;
+//            switch (op)
+//            {
+//                case Operation.Add:
+//                    result = x + y;
+//                    break;
+//                case Operation.Subtract:
+//                    result = x - y;
+//                    break;
+//                case Operation.Multiply:
+//                    result = x * y;
+//                    break;
+//                case Operation.Divide:
+//                    result = x / y;
+//                    break;
+//            }
+//            Console.WriteLine(result);
+
+//        }
+//    }
+//}
 //class Program
 //{//перечесление может быть в пределах класса програм или вне класа в пределах пространства имён 
 //    enum Days// перечисление- логически связанные константы(можно указать тип перечисления- по умолчанию int и присваивается от 0 и віше на единицу)
