@@ -2,43 +2,110 @@
 
 namespace My_firstApp
 {
-    struct User // так же ка переменніе можн определить массив структур
-    {
-        public string name;
-        public int age;
-
-        public void DisplayInfo()
-        {
-            Console.WriteLine($"name={name} age={age}");
-        }
-
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            User[] users = new User[2];//определяем массив структур с 2мя структурами
-            users[0].name = "Bob";
-            users[0].age = 20;
-            users[1].name = "Sam";
-            users[1].age = 25;
-            foreach (User user in users)
-            {
-                user.DisplayInfo();
-            }
+            var tuple = (5, 10);// определили кортеж, неявная типизация
+            //(int, int) tuple = (5,10)-так выглядит если  указать тип данного кортежа 
 
-            User tom;
-            tom.name = "Tom";
-            tom.age = 23;
+            Console.WriteLine(tuple.Item1);//по умолчанию для элементов корт присваиваются имена для эл кортежа Item
+            Console.WriteLine(tuple.Item2);
 
-            tom.DisplayInfo();
+            tuple.Item1 += 20;
+            Console.WriteLine(tuple.Item1);
+
             Console.ReadKey();
-
         }
-        string name = "Tom";
-        int age = 23;
+
+
     }
 }
+
+
+    //
+//    struct User
+//    {
+//        public string name;
+//        public int age;
+
+//        public User(string n, int a);
+//        {
+//           name = n; age = a;
+//            }
+        
+
+
+//    public void DisplayInfo()
+//    {
+//        Console.WriteLine($"name={name} age={age}");
+//    }
+
+
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            User[] users = new User[2];//определяем массив структур с 2мя структурами
+//            users[0].name = "Bob";
+//            users[0].age = 20;
+//            users[1].name = "Sam";
+//            users[1].age = 25;
+//            foreach (User user in users)
+//            {
+//                user.DisplayInfo();
+//            }
+
+//            User tom = new User("Tom", 23);
+
+//            int d = tom.age;
+
+
+//            tom.DisplayInfo();
+//            Console.ReadKey();
+
+//        }
+//    }
+
+//}
+/////////////
+//    struct User // так же ка переменніе можн определить массив структур
+//    {
+//        public string name;
+//        public int age;
+
+//        public void DisplayInfo()
+//        {
+//            Console.WriteLine($"name={name} age={age}");
+//        }
+
+//    }
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            User[] users = new User[2];//определяем массив структур с 2мя структурами
+//            users[0].name = "Bob";
+//            users[0].age = 20;
+//            users[1].name = "Sam";
+//            users[1].age = 25;
+//            foreach (User user in users)
+//            {
+//                user.DisplayInfo();
+//            }
+
+//            User tom;
+//            tom.name = "Tom";
+//            tom.age = 23;
+
+//            tom.DisplayInfo();
+//            Console.ReadKey();
+
+//        }
+//        string name = "Tom";
+//        int age = 23;
+//    }
+//}
 
 
 //struct User//структура пределяется вне класса- определяем переменные
@@ -68,12 +135,12 @@ namespace My_firstApp
 //        }
 //        string name = "Tom";
 //        int age = 23;
-        
+
 //    }
 //}
 //    class Program
 //    {//перечесление может быть в пределах класса програм или вне класа в пределах пространства имён 
-        
+
 //        static void Main(string[] args)
 //        {
 //            ApplyOperation(10, 15, Operation.Add);//25
