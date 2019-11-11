@@ -6,21 +6,33 @@ namespace My_firstApp
     {
         static void Main(string[] args)
         {
-            var tuple = (5, 10);// определили кортеж, неявная типизация
-            //(int, int) tuple = (5,10)-так выглядит если  указать тип данного кортежа 
-
-            Console.WriteLine(tuple.Item1);//по умолчанию для элементов корт присваиваются имена для эл кортежа Item
-            Console.WriteLine(tuple.Item2);
-
-            tuple.Item1 += 20;
-            Console.WriteLine(tuple.Item1);
+            var (name, age) = ("Tom", 25);//опеределяем для отдельных элем корт свои сбственные переменные (строка, число)
+            Console.WriteLine(name);
+            Console.WriteLine(age);
 
             Console.ReadKey();
         }
-
-
     }
 }
+
+
+//        static void Main(string[] args)
+//        {
+//            var tuple = (count:5, sum:10);//можем явным способом задать названия для элементов кортежа, определили кортеж, неявная типизация
+//            //(int, int) tuple = (5,10)-так выглядит если  указать тип данного кортежа 
+
+//            Console.WriteLine(tuple.Item1);//по умолчанию для элементов корт присваиваются имена для эл кортежа Item
+//            Console.WriteLine(tuple.Item2);
+
+//            tuple.Item1 += 20;
+//            Console.WriteLine(tuple.Item1);
+
+//            Console.ReadKey();
+//        }
+
+
+//    }
+//}
 
 
     //
