@@ -4,16 +4,37 @@ namespace My_firstApp
 {
     class Program
     {
+
+        static (int, int) GetValue()// кортежи также для возвращения нескольких значений из метода(кортеж)
+        {
+            int result = 1;
+            int result2 = 3;
+            return (result, result2);
+        }
         static void Main(string[] args)
         {
-            var (name, age) = ("Tom", 25);//опеределяем для отдельных элем корт свои сбственные переменные (строка, число)
-            Console.WriteLine(name);
-            Console.WriteLine(age);
+            var tuple = GetValue();
+
+            Console.WriteLine(tuple.Item1);
+            Console.WriteLine(tuple.Item2);
 
             Console.ReadKey();
         }
+
     }
 }
+
+            
+//        static void Main(string[] args)
+//        {
+//            var (name, age) = ("Tom", 25);//опеределяем для отдельных элем корт свои сбственные переменные (строка, число)
+//            Console.WriteLine(name);
+//            Console.WriteLine(age);
+
+//            Console.ReadKey();
+//        }
+//    }
+//}
 
 
 //        static void Main(string[] args)
