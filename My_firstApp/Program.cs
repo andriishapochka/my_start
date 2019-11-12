@@ -4,23 +4,26 @@ namespace My_firstApp
 {
     class Program
     {
-        static void Main(string[] args)// присвоение данных  обьекту значений, значю типа(получает копию значения) 
+        static void Main(string[] args)
         {
-            State state1 = new State();
-            State state2 = new State();
+            Country country1 = new Country();
+            Country country2 = new Country();
 
-            state2.x = 1;
-            state2.y = 2;
+            country2.x = 1;
+            country2.y = 2;
 
-            state1 = state2; //state1 получает значение (копию значения) state2, state1.x=1, state1.y=2 -
+            country1 = country2;//при присвоении данных обьекта значений ссылочного типа он получает не копию обьекта, а ссылку на тот же обьект в куче 
 
-            state2.x = 5;// изменяя значение не приведёт к изменению state1.x
+            Console.WriteLine(country1.x);
 
-            Console.WriteLine(state1.x);
-            Console.WriteLine(state2.x);
-                Console.ReadKey();
+            country2.x = 5;// измениться и значение country1
+
+            Console.WriteLine(country1.x);
+            Console.WriteLine(country2.x);
+
+            Console.ReadKey();
         }
-        
+
         static void Calculate(int t)
         {
             object x = 6;
@@ -39,6 +42,41 @@ namespace My_firstApp
         public int y;
     }
 }
+//        static void Main(string[] args)
+//        {
+//            State state1 = new State();
+//            State state2 = new State();
+
+//            state2.x = 1;
+//            state2.y = 2;
+
+//            state1 = state2; //state1 получает значение (копию значения) state2, state1.x=1, state1.y=2 -
+
+//            state2.x = 5;// изменяя значение не приведёт к изменению state1.x
+
+//            Console.WriteLine(state1.x);
+//            Console.WriteLine(state2.x);
+//                Console.ReadKey();
+//        }
+
+//        static void Calculate(int t)
+//        {
+//            object x = 6;
+//            int y = 7;
+//            int z = y + t;
+//        }
+//    }
+//    struct State
+//    {
+//        public int x;
+//        public int y;
+//    }
+//    class Country
+//    {
+//        public int x;
+//        public int y;
+//    }
+//}
 
 //        static void Main(string[] args)
 //        {
