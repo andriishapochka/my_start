@@ -2,23 +2,50 @@
 
 namespace My_firstApp
 {
-    class Program// передаём в метод кортеж и возвращаем из метода кортеж
+    class Program
     {
-        static (string, int) GetValue((string, int) tuple, int x)// передаем в методкортежиз строки и числа и принимает ещё один параметр х
-        {
-            var result = (name: tuple.Item1, age: tuple.Item2 + x);//присвоим названия элементам, второй элемент учеличен на х
-            return result;
-        }
         static void Main(string[] args)
         {
-            var tuple = GetValue(("Tom", 25), 10);//передаём в метод кортеж
-            Console.WriteLine(tuple.Item1);
-            Console.WriteLine(tuple.Item2);
-
+            State state1 = new State();
+            Country country1 = new Country();
             Console.ReadKey();
         }
+        static void Calculate(int t)
+        {
+            object x = 6;
+            int y = 7;
+            int z = y + t;
+        }
+    }
+    struct State
+    {
+        public int x;
+        public int y;
+    }
+    class Country
+    {
+        public int x;
+        public int y;
     }
 }
+
+//    class Program// передаём в метод кортеж и возвращаем из метода кортеж в качестве результата
+//    {
+//        static (string, int) GetValue((string, int) tuple, int x)// передаем в методкортежиз строки и числа и принимает ещё один параметр х
+//        {
+//            var result = (name: tuple.Item1, age: tuple.Item2 + x);//присвоим названия элементам, второй элемент учеличен на х
+//            return result;
+//        }
+//        static void Main(string[] args)
+//        {
+//            var tuple = GetValue(("Tom", 25), 10);//передаём в метод кортеж
+//            Console.WriteLine(tuple.Item1);
+//            Console.WriteLine(tuple.Item2);
+
+//            Console.ReadKey();
+//        }
+//    }
+//}
 
 
 //        static (int, int) GetValue()// кортежи также для возвращения нескольких значений из метода(кортеж)
