@@ -6,20 +6,18 @@ namespace My_firstApp
     {
         static void Main(string[] args)
         {
-            Country country1 = new Country();
-            Country country2 = new Country();
+            State state1 = new State();
+            State state2 = new State();
 
-            country2.x = 1;
-            country2.y = 2;
+            state2.country = new Country();
+            state2.country.x = 8;
 
-            country1 = country2;//при присвоении данных обьекта значений ссылочного типа он получает не копию обьекта, а ссылку на тот же обьект в куче 
+            state1 = state2;//при присвоении переменной
 
-            Console.WriteLine(country1.x);
+            state2.country.x = 5;//если меняем значение в state2.country.x то меняется и значение state1.country.x
 
-            country2.x = 5;// измениться и значение country1
-
-            Console.WriteLine(country1.x);
-            Console.WriteLine(country2.x);
+            Console.WriteLine(state1.country.x);//после присвения значения ссылаются на одно и тоже значние в куче
+            Console.WriteLine(state2.country.x);//хранит ссылку на  один обьект в куче
 
             Console.ReadKey();
         }
@@ -35,6 +33,7 @@ namespace My_firstApp
     {
         public int x;
         public int y;
+        public Country country;
     }
     class Country
     {
@@ -42,6 +41,44 @@ namespace My_firstApp
         public int y;
     }
 }
+//        static void Main(string[] args)
+//        {
+//            Country country1 = new Country();
+//            Country country2 = new Country();
+
+//            country2.x = 1;
+//            country2.y = 2;
+
+//            country1 = country2;//при присвоении данных обьекта значений ссылочного типа он получает не копию обьекта, а ссылку на тот же обьект в куче 
+
+//            Console.WriteLine(country1.x);
+
+//            country2.x = 5;// измениться и значение country1
+
+//            Console.WriteLine(country1.x);
+//            Console.WriteLine(country2.x);
+
+//            Console.ReadKey();
+//        }
+
+//        static void Calculate(int t)
+//        {
+//            object x = 6;
+//            int y = 7;
+//            int z = y + t;
+//        }
+//    }
+//    struct State
+//    {
+//        public int x;
+//        public int y;
+//    }
+//    class Country
+//    {
+//        public int x;
+//        public int y;
+//    }
+//}
 //        static void Main(string[] args)
 //        {
 //            State state1 = new State();
