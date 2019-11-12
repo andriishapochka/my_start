@@ -2,29 +2,45 @@
 
 namespace My_firstApp
 {
-    class Program
+    class Program// передаём в метод кортеж и возвращаем из метода кортеж
     {
-
-        static (int, int) GetValue()// кортежи также для возвращения нескольких значений из метода(кортеж)
+        static (string, int) GetValue((string, int) tuple, int x)// передаем в методкортежиз строки и числа и принимает ещё один параметр х
         {
-            int result = 1;
-            int result2 = 3;
-            return (result, result2);
+            var result = (name: tuple.Item1, age: tuple.Item2 + x);//присвоим названия элементам, второй элемент учеличен на х
+            return result;
         }
         static void Main(string[] args)
         {
-            var tuple = GetValue();
-
+            var tuple = GetValue(("Tom", 25), 10);//передаём в метод кортеж
             Console.WriteLine(tuple.Item1);
             Console.WriteLine(tuple.Item2);
 
             Console.ReadKey();
         }
-
     }
 }
 
-            
+
+//        static (int, int) GetValue()// кортежи также для возвращения нескольких значений из метода(кортеж)
+//        {
+//            int result = 1;
+//            int result2 = 3;
+//            return (result, result2);
+//        }
+//        static void Main(string[] args)
+//        {
+//            var tuple = GetValue();
+
+//            Console.WriteLine(tuple.Item1);
+//            Console.WriteLine(tuple.Item2);
+
+//            Console.ReadKey();
+//        }
+
+//    }
+//}
+
+
 //        static void Main(string[] args)
 //        {
 //            var (name, age) = ("Tom", 25);//опеределяем для отдельных элем корт свои сбственные переменные (строка, число)
@@ -56,7 +72,7 @@ namespace My_firstApp
 //}
 
 
-    //
+//
 //    struct User
 //    {
 //        public string name;
@@ -66,7 +82,7 @@ namespace My_firstApp
 //        {
 //           name = n; age = a;
 //            }
-        
+
 
 
 //    public void DisplayInfo()
