@@ -4,12 +4,23 @@ namespace My_firstApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)// присвоение данных  обьекту значений, значю типа(получает копию значения) 
         {
             State state1 = new State();
-            Country country1 = new Country();
-            Console.ReadKey();
+            State state2 = new State();
+
+            state2.x = 1;
+            state2.y = 2;
+
+            state1 = state2; //state1 получает значение (копию значения) state2, state1.x=1, state1.y=2 -
+
+            state2.x = 5;// изменяя значение не приведёт к изменению state1.x
+
+            Console.WriteLine(state1.x);
+            Console.WriteLine(state2.x);
+                Console.ReadKey();
         }
+        
         static void Calculate(int t)
         {
             object x = 6;
@@ -28,6 +39,31 @@ namespace My_firstApp
         public int y;
     }
 }
+
+//        static void Main(string[] args)
+//        {
+//            State state1 = new State();
+//            Country country1 = new Country();
+//            Console.ReadKey();
+//        }
+//        static void Calculate(int t)
+//        {
+//            object x = 6;
+//            int y = 7;
+//            int z = y + t;
+//        }
+//    }
+//    struct State
+//    {
+//        public int x;
+//        public int y;
+//    }
+//    class Country
+//    {
+//        public int x;
+//        public int y;
+//    }
+//}
 
 //    class Program// передаём в метод кортеж и возвращаем из метода кортеж в качестве результата
 //    {
