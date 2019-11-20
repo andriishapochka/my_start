@@ -1,46 +1,77 @@
 ﻿using System;
 
 namespace My_firstApp
+
 {
     class Program
     {
         static void Main(string[] args)
         {
-            State state1 = new State();
-            State state2 = new State();
-
-            state2.country = new Country();
-            state2.country.x = 8;
-
-            state1 = state2;//при присвоении переменной
-
-            state2.country.x = 5;//если меняем значение в state2.country.x то меняется и значение state1.country.x
-
-            Console.WriteLine(state1.country.x);//после присвения значения ссылаются на одно и тоже значние в куче
-            Console.WriteLine(state2.country.x);//хранит ссылку на  один обьект в куче
-
+            User user1 = new User { name = "Tom", age = 22 };
+            ChangeUser(ref user1);
+            Console.WriteLine($"{user1.name} - {user1.age}");
             Console.ReadKey();
+            
+        }
+        static void ChangeUser(ref User user)
+        {
+            user.name = "Bob";
+            user.age = 33;
         }
 
-        static void Calculate(int t)
-        {
-            object x = 6;
-            int y = 7;
-            int z = y + t;
-        }
     }
-    struct State
+    struct User
     {
-        public int x;
-        public int y;
-        public Country country;
+        public int age;
+        public string name;
     }
-    class Country
+    class Person
     {
-        public int x;
-        public int y;
+        public int age;
+        public string name;
     }
 }
+
+
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            State state1 = new State();
+//            State state2 = new State();
+
+//            state2.country = new Country();
+//            state2.country.x = 8;
+
+//            state1 = state2;//при присвоении переменной
+
+//            state2.country.x = 5;//если меняем значение в state2.country.x то меняется и значение state1.country.x
+
+//            Console.WriteLine(state1.country.x);//после присвения значения ссылаются на одно и тоже значние в куче
+//            Console.WriteLine(state2.country.x);//хранит ссылку на  один обьект в куче
+
+//            Console.ReadKey();
+//        }
+
+//        static void Calculate(int t)
+//        {
+//            object x = 6;
+//            int y = 7;
+//            int z = y + t;
+//        }
+//    }
+//    struct State
+//    {
+//        public int x;
+//        public int y;
+//        public Country country;
+//    }
+//    class Country
+//    {
+//        public int x;
+//        public int y;
+//    }
+//}
 //        static void Main(string[] args)
 //        {
 //            Country country1 = new Country();
