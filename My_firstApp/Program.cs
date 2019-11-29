@@ -3,34 +3,55 @@
 namespace My_firstApp
 
 {
-    class Program
+    class Program  // модификаторы доступа #1 public
     {
         static void Main(string[] args)
         {
-            User user1 = new User { name = "Tom", age = 22 };
-            ChangeUser(ref user1);
-            Console.WriteLine($"{user1.name} - {user1.age}");
-            Console.ReadKey();
-            
-        }
-        static void ChangeUser(ref User user)
-        {
-            user.name = "Bob";
-            user.age = 33;
-        }
+            Person person = new Person();
 
-    }
-    struct User
-    {
-        public int age;
-        public string name;
+            Console.ReadKey();
+        }
     }
     class Person
     {
         public int age;
         public string name;
+        public void Display()
+
+        {
+            Console.WriteLine($"{name}");
+        }
+
     }
 }
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            User user1 = new User { name = "Tom", age = 22 };
+//            ChangeUser(ref user1);
+//            Console.WriteLine($"{user1.name} - {user1.age}");
+//            Console.ReadKey();
+            
+//        }
+//        static void ChangeUser(ref User user)
+//        {
+//            user.name = "Bob";
+//            user.age = 33;
+//        }
+
+//    }
+//    struct User
+//    {
+//        public int age;
+//        public string name;
+//    }
+//    class Person
+//    {
+//        public int age;
+//        public string name;
+//    }
+//}
 
 
 //    class Program
