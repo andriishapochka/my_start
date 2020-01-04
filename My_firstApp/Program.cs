@@ -1,29 +1,68 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Accounts;
 
 namespace My_firstApp
-
-{
-    class Program  // модификаторы доступа #1 public
+{ 
+   class Program
     {
         static void Main(string[] args)
         {
             Person person = new Person();
+            //person.name = "Tom";
+            person.Display();
+
+            User user = new User();
 
             Console.ReadKey();
+            
+        }
+    }
+    class Manager : User
+    {
+        public void DisplayManager()
+        {
+            Console.WriteLine($"{name}");
         }
     }
     class Person
     {
+        
         public int age;
-        public string name;
+        string name;
         public void Display()
-
         {
-            Console.WriteLine($"{name}");
+            Console.WriteLine($"{age}");
         }
-
+    
     }
+
 }
+
+//    class Program  // модификаторы доступа #1 public
+//    {
+//        static void Main(string[] args)
+//        {
+//            Person person = new Person();
+
+//            Console.ReadKey();
+//        }
+//    }
+//    class Person
+//    {
+//        public int age;
+//        public string name;
+//        public void Display()
+
+//        {
+//            Console.WriteLine($"{name}");
+//        }
+
+//    }
+//}
 //    class Program
 //    {
 //        static void Main(string[] args)
